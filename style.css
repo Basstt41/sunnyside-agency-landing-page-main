@@ -1,0 +1,284 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body h1, body h2, body h3, body a {
+  font-family: "Fraunces", serif;
+}
+body img {
+  max-width: 100%;
+}
+body p {
+  font-family: "Barlow", sans-serif;
+}
+body nav {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  z-index: 2 !important;
+}
+body nav button {
+  border: none;
+  background-color: transparent;
+}
+body nav #nav-container {
+  display: none;
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  top: 5em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  padding: 2em;
+}
+body nav #nav-container ul {
+  display: grid;
+  grid-gap: 1em;
+  list-style: none;
+}
+body nav #nav-container ul li > a {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  text-decoration: none;
+  color: hsl(212, 27%, 19%);
+}
+body nav .nav-active {
+  display: grid !important;
+}
+body header .header__text-container {
+  position: absolute;
+  width: 100%;
+  top: 42%;
+  transform: translateY(-50%);
+  gap: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+body header .header__text-container h1 {
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 10px;
+}
+body picture {
+  display: flex;
+}
+body article {
+  position: relative;
+}
+body article div {
+  padding: 3em 2em;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 1.5em;
+}
+body article div h2 {
+  font-size: 2em;
+  font-weight: 600;
+  color: hsl(212, 27%, 19%);
+  font-weight: 900 !important;
+}
+body article div p {
+  font-size: 18px;
+  color: hsl(210, 4%, 67%);
+  line-height: 1.7;
+}
+body article div a {
+  color: hsl(212, 27%, 19%);
+  -webkit-text-decoration: underline 4px solid hsl(51, 100%, 49%);
+          text-decoration: underline 4px solid hsl(51, 100%, 49%);
+}
+body article .gallery_absolute-text {
+  position: absolute;
+  bottom: 0;
+  font-size: 14px;
+}
+body article .graphic h2, body article .graphic p {
+  color: hsl(167, 40%, 24%) !important;
+}
+body article .photo h2, body article .photo p {
+  color: hsl(198, 62%, 26%) !important;
+}
+body .client-testimonials {
+  padding: 2em 0;
+  display: grid;
+  place-items: center;
+  grid-gap: 2em;
+}
+body .client-testimonials p, body .client-testimonials span, body .client-testimonials h3 {
+  color: hsl(210, 4%, 67%);
+}
+body .client-testimonials h3 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+body .client-testimonials h4 {
+  font-family: "Fraunces", serif;
+  color: hsl(212, 27%, 19%);
+  font-weight: 900;
+}
+body .client-testimonials span {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+}
+body .client-testimonials article {
+  display: grid;
+  place-items: center;
+  grid-gap: 1em;
+  text-align: center;
+  padding: 1em;
+  font-size: 18px;
+  line-height: 2;
+}
+body .client-testimonials article img {
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+}
+body .mosaico {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 50%);
+}
+body footer {
+  background-color: hsl(167, 43%, 70%);
+  display: grid;
+  place-items: center;
+  padding: 3em 1em;
+  grid-gap: 2em;
+}
+body footer ul {
+  list-style: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  color: hsl(167, 40%, 24%);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+body footer ul li > a {
+  text-decoration: none;
+  color: hsl(167, 40%, 24%);
+  font-family: "Barlow", sans-serif;
+}
+body footer .footer__links-container {
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+@media screen and (min-width: 750px) {
+  body nav {
+    padding: 2em;
+    position: absolute;
+  }
+  body nav button {
+    display: none;
+  }
+  body nav #nav-container {
+    display: flex;
+    background-color: transparent;
+    right: 0;
+    top: 0;
+    transform: translate(0);
+    width: auto;
+  }
+  body nav #nav-container ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  body nav #nav-container ul li > a {
+    color: hsl(0, 0%, 100%);
+    padding: 1em 1.5em;
+  }
+  body nav #nav-container ul li > #nav__contact-btn {
+    border-radius: 50px;
+    color: hsl(212, 27%, 19%);
+    background-color: hsl(0, 0%, 100%);
+    font-family: "Fraunces", serif;
+  }
+  body section {
+    display: grid;
+  }
+  body section article {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  body section article img {
+    width: 100%;
+  }
+  body section article div {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    text-align: left;
+  }
+  body section article div h2, body section article div a, body section article div p {
+    width: 70%;
+  }
+  body section .main__transform picture {
+    order: 2;
+  }
+  body section .main__stand a {
+    -webkit-text-decoration: underline 4px solid hsl(7, 99%, 70%);
+            text-decoration: underline 4px solid hsl(7, 99%, 70%);
+  }
+  body .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  body .gallery-container article {
+    display: block;
+  }
+  body .gallery-container article .gallery_absolute-text {
+    position: absolute;
+    text-align: center;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+  }
+  body .client-testimonials {
+    border: 1px solid blue;
+    padding: 100px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: auto auto;
+  }
+  body .client-testimonials .client-testimonial__wrapper {
+    padding-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+  }
+  body .client-testimonials .client-testimonial__wrapper article {
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+  }
+  body .mosaico {
+    grid-template-columns: repeat(4, 25%);
+  }
+  body footer {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+  }
+  body footer ul {
+    width: 500px;
+  }
+}/*# sourceMappingURL=style.css.map */
